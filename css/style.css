@@ -1,0 +1,287 @@
+.game * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hell {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+}
+
+body .split {
+  width: 50%;
+  height: 100vh;
+}
+
+body .website {
+  word-break: break-all;
+  overflow: auto;
+}
+
+body .game {
+  background-color: #d7fff1;
+  border: 5px #285943 solid;
+  padding: 40px;
+  margin: 1vh 1vh;
+  position: -webkit-sticky;
+  position: sticky;
+  overflow: auto;
+  height: 88vh !important;
+  border-radius: 20px;
+}
+
+body .game .title {
+  font-family: blockhead-black-face, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body .game .shopMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .game .shopMenu div {
+  width: 50%;
+}
+
+body .game .player-info {
+  font-family: blockhead-unplugged, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  padding: 20px 0;
+}
+
+body .game .player-info .playerchar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .game .player-info .playerchar .playerCPS {
+  opacity: 0.8;
+}
+
+body .game .player-info .progressBarLvl {
+  width: 100px;
+  height: 20px;
+  background-color: #c0afcf;
+}
+
+body .game .player-info .progressBarLvl .actualXP {
+  height: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #8621da;
+}
+
+body .game .playerMenu {
+  margin: 20px 0;
+}
+
+body .game .playerMenu .btnSelection,
+body .game .playerMenu .cssBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  margin-bottom: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .game .playerMenu .btnSelection div,
+body .game .playerMenu .cssBtn div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  margin: 2.5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .game .playerMenu .btnSelection div input,
+body .game .playerMenu .cssBtn div input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 20%;
+  height: 40px;
+}
+
+body .game .playerMenu .btnSelection div label,
+body .game .playerMenu .cssBtn div label {
+  pointer-events: none;
+  font-family: blockhead-unplugged, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body .game .playerMenu .btnSelection div input:checked ~ label,
+body .game .playerMenu .cssBtn div input:checked ~ label {
+  color: #8621da;
+}
+
+body .game .playerMenu .btnSelection div input:hover ~ label,
+body .game .playerMenu .cssBtn div input:hover ~ label {
+  color: #6e5980;
+}
+
+body .game .playerMenu form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .game .playerMenu form .text {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  min-width: 50%;
+  max-width: 80%;
+  width: 80%;
+  height: 100%;
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body .game .playerMenu form .pushBtn {
+  min-width: 15%;
+  max-width: 50%;
+  width: 50%;
+  background: rgba(0, 0, 0, 0);
+  border: 2px black solid;
+  margin: 0px 10px;
+  font-family: blockhead-unplugged, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+body .game .playerMenu .otherBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .game .playerMenu .otherBtn button {
+  width: 50%;
+  background: rgba(0, 0, 0, 0);
+  border: 2px black solid;
+  margin: 20px;
+  padding: 20px;
+  font-family: blockhead-unplugged, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+body .game .shopMenu div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .game .shopMenu div div h3 {
+  padding-right: 50px;
+  font-family: blockhead-black-face, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body .game .shopMenu div div button {
+  background: rgba(0, 0, 0, 0);
+  border: 2px black solid;
+  padding: 10px 10px;
+  font-family: blockhead-unplugged, sans-serif;
+  font-weight: 400;
+  min-width: 60px;
+  height: 60px;
+  font-style: normal;
+  cursor: pointer;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=style.css.map */

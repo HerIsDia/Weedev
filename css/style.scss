@@ -1,0 +1,193 @@
+.game * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hell {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  .split {
+    width: 50%;
+    height: 100vh;
+  }
+  .website {
+    word-break: break-all;
+    overflow: auto;
+  }
+  .game {
+    background-color: #d7fff1;
+    border: 5px #285943 solid;
+    padding: 40px;
+    margin: 1vh 1vh;
+    position: sticky;
+    overflow: auto;
+    height: 88vh !important;
+    border-radius: 20px;
+    .title {
+      font-family: blockhead-black-face, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .shopMenu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      div {
+        width: 50%;
+      }
+    }
+    .player-info {
+      font-family: blockhead-unplugged, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      padding: 20px 0;
+      .playerchar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        .playerCPS {
+          opacity: 0.8;
+        }
+      }
+      .progressBarLvl {
+        width: 100px;
+        height: 20px;
+        background-color: #c0afcf;
+        .actualXP {
+          height: 20px;
+          transition: all 0.5s ease-in-out;
+          background-color: #8621da;
+        }
+      }
+    }
+    .playerMenu {
+      margin: 20px 0;
+      .btnSelection,
+      .cssBtn {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        align-content: space-around;
+        align-items: center;
+        div {
+          display: flex;
+          width: 20%;
+          margin: 2.5%;
+          flex-direction: column;
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            width: 20%;
+            height: 40px;
+          }
+          label {
+            pointer-events: none;
+            font-family: blockhead-unplugged, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+          input:checked ~ label {
+            color: #8621da;
+          }
+          input:hover ~ label {
+            color: #6e5980;
+          }
+        }
+      }
+      form {
+        display: flex;
+        .text {
+          background-color: rgba($color: #000000, $alpha: 0);
+          border: none;
+          min-width: 50%;
+          max-width: 80%;
+          width: 80%;
+          height: 100%;
+          font-family: ibm-plex-mono, sans-serif;
+          font-weight: 300;
+          font-style: normal;
+        }
+        .pushBtn {
+          min-width: 15%;
+          max-width: 50%;
+          width: 50%;
+          background: rgba($color: #000000, $alpha: 0);
+          border: 2px black solid;
+          margin: 0px 10px;
+          font-family: blockhead-unplugged, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          cursor: pointer;
+          border-radius: 10px;
+        }
+      }
+      .otherBtn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        button {
+          width: 50%;
+          background: rgba($color: #000000, $alpha: 0);
+          border: 2px black solid;
+          margin: 20px;
+          padding: 20px;
+          font-family: blockhead-unplugged, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          cursor: pointer;
+          border-radius: 10px;
+        }
+      }
+    }
+    .shopMenu {
+      div div {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+          padding-right: 50px;
+          font-family: blockhead-black-face, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+        button {
+          background: rgba($color: #000000, $alpha: 0);
+          border: 2px black solid;
+          padding: 10px 10px;
+          font-family: blockhead-unplugged, sans-serif;
+          font-weight: 400;
+          min-width: 60px;
+          height: 60px;
+          font-style: normal;
+          cursor: pointer;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
