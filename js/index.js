@@ -1,4 +1,4 @@
-body.addEventListener('keypress', () => {
+body.addEventListener('keyup', () => {
   addChar();
 });
 
@@ -36,6 +36,17 @@ pushButton.addEventListener('click', (e) => {
     push();
   } else {
     alert("You don't have enouth character");
+  }
+});
+
+imputText.addEventListener('keypress', (e) => {
+  if (e.key == 'Enter') {
+    e.preventDefault();
+    if (playerInfo.character >= cost) {
+      push();
+    } else {
+      alert("You don't have enouth character");
+    }
   }
 });
 

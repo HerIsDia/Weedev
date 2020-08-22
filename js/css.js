@@ -66,6 +66,7 @@ const cssStuff = [
 ];
 
 function cssaddparams() {
+  cssBtn.innerHTML = '';
   cssStuff.forEach((e) => {
     if (e.lvl <= playerInfo.lvl) {
       const cssbut = document.createElement('input');
